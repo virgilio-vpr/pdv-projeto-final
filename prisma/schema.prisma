@@ -8,8 +8,9 @@ generator client {
 }
 
 model Sale {
-  id      Int      @id @default(autoincrement())
-  product String   @unique
-  price   Decimal
-  date    DateTime
+  id        Int      @id @default(autoincrement())
+  product   String   @unique
+  price     Decimal
+  createdAt DateTime @default(now())
+  updatedUp DateTime @updatedAt
 }
